@@ -41,14 +41,11 @@
         * DATABASE_URL="postgresql://postgres:postgres@localhost:5432/prisma?schema=public"
     * npx prisma migrate dev --name create_user_login
     * npx prisma studio
-        
-
 ### Prisma Config
     * DATABASE_URL="postgresql://postgres:postgres@localhost:5432/prisma?schema=public"
     * npx prisma migrate dev --name create_user_login
         ## Opcional 
             * npx prisma migrate reset
             * npx prisma migrate dev --name change_user_table_name
-
 ### Criar o banco com nome de prisma | outro de preferência
     *  

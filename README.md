@@ -50,6 +50,33 @@
             * npx prisma migrate reset
             * npx prisma migrate dev --name change_user_table_name
 
-### Criar o banco com nome de prisma | outro de preferência
-    *  
-
+### vercel
+    *  https://www.youtube.com/watch?v=8jttLYYDWjo
+    *  https://www.youtube.com/watch?v=FZiza5N6BQU&t=440s
+    * instalar dependência
+    ```
+    npm install -g vercel
+    ```
+#### vercel script
+```
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "./idst",
+            "user": "@now/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/dist/server.js"
+        }
+    ]
+}
+```
+### Neon tech
+```
+https://www.youtube.com/watch?v=FZiza5N6BQU
+```
+### Proximo
