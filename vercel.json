@@ -9,8 +9,7 @@
     "routes": [
         {
             "src": "(.*)",
-            "dest": "src/routes.ts"
-
+            "dist": "src/server.ts"
         }
     ]
 }

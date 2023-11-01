@@ -34,7 +34,7 @@ router.get('/login/:id', findLogin.handle)
 router.delete('/login/:id', deleteLogin.handle)
 
 /* ROTAS USUARIOS */
-router.get('/', findAllUser.handle)
+router.get('/users', findAllUser.handle)
 router.post('/user', createUser.handle)
 router.get('/user', findAllUser.handle)
 router.get('/user/:id', findUser.handle)
