@@ -48,4 +48,5 @@
             * npx prisma migrate reset
             * npx prisma migrate dev --name change_user_table_name
 ### Criar o banco com nome de prisma | outro de preferência
-    *  
+### EndPoint Interno
+### EndPoint Externo
