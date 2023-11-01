@@ -30,7 +30,7 @@ const createUser = new CreateUserController
 const deleteUser = new DeleteUserController
 
 /* TODOS METHODOS USUARIOS */
-const CreateCondominio = new FindAllCondominioController
+const CreateCondominio = new CreateCondominioController
 const ListCondominio = new FindAllCondominioController
 
 /* ROTAS LOGIN */
