@@ -14,10 +14,9 @@ app.use((req, res, next) => {
 	//Quais são os métodos que a conexão pode realizar na API
     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
     app.use(cors());
+    app.use(router)
     next();
 });
-
-app.use(router)
 
 app.listen(port, () => {
     console.log('Server is running! porta: ' + port)
