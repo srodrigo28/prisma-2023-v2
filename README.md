@@ -49,6 +49,7 @@
         ## Opcional 
             * npx prisma migrate reset
             * npx prisma migrate dev --name change_user_table_name
+            * npx prisma migrate dev --name table_condominio
 
 ### vercel
     *  https://www.youtube.com/watch?v=8jttLYYDWjo

@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { 
+import { /** Todos Methodos User */
         CreateLoginController, DeleteLoginController,
         FindAllLoginController, FindLoginController, UpdateLoginController
 } from './controllers/LoginController';
@@ -9,6 +9,9 @@ import { /** Todos Methodos User */
         DeleteUserController, CreateUserController, 
         FindUserController, FindAllUserController, UpdateUserController 
 } from './controllers/UserController';
+
+/** Todos Methodos Condominio */
+import { CreateCondominioController, FindAllCondominioController } from './controllers/CondominioController';
 
 const router = Router();
 
@@ -26,7 +29,15 @@ const updateUser = new UpdateUserController
 const createUser = new CreateUserController
 const deleteUser = new DeleteUserController
 
-/* ROTAS USUARIOS */
+/* TODOS METHODOS USUARIOS */
+const CreateCondominio = new FindAllCondominioController
+const ListCondominio = new FindAllCondominioController
+
+/* ROTAS LOGIN */
+router.get('/condominio', ListCondominio.handle)
+router.post('/condominio', CreateCondominio.handle)
+
+/* ROTAS LOGIN */
 router.get('/login', findAllLogin.handle)
 router.post('/login', createLogin.handle)
 router.put('/login/:id', updateLogin.handle)

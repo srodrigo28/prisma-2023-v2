@@ -11,18 +11,32 @@ datasource db {
 }
 
 model User {
-        id Int @id @default(autoincrement())
-        email String @unique
-        name String?
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String?
 
-        @@map("user")
-        }
+  @@map("user")
+}
 
-        model Login {
-        id Int @id @default(autoincrement())
-        email String @unique
-        name String?
-        senha String?
+model Login {
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String?
+  senha String?
 
-        @@map("login")
-    }
+  @@map("login")
+}
+
+model Condominio {
+  id Int @id @default(autoincrement())
+  nome String @unique
+  cnpj String @unique
+  estadual String @unique
+  contato String
+  email String @unique
+
+  cidade String
+  endereco String @unique
+
+  @@map("condominio")
+}
