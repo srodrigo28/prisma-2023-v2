@@ -6,6 +6,9 @@
     * [x] npm i express
     * [x] npm i @types/express -D
     * [x] npm i ts-node-dev -D
+    * [x] npm i cors
+    * [x] npm install --save @types/cors
+
 ### Config package.json
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
