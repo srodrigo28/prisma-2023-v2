@@ -11,7 +11,10 @@ import { /** Todos Methodos User */
 } from './controllers/UserController';
 
 /** Todos Methodos Condominio */
-import { CreateCondominioController, FindAllCondominioController } from './controllers/CondominioController';
+import { 
+        CreateCondominioController, 
+        FindAllCondominioController 
+} from './controllers/CondominioController';
 
 const router = Router();
 
@@ -29,11 +32,11 @@ const updateUser = new UpdateUserController
 const createUser = new CreateUserController
 const deleteUser = new DeleteUserController
 
-/* TODOS METHODOS USUARIOS */
+/* TODOS METHODOS CONDOMINIO */
 const CreateCondominio = new CreateCondominioController
 const ListCondominio = new FindAllCondominioController
 
-/* ROTAS LOGIN */
+/* ROTAS CONDOMINIO */
 router.get('/condominio', ListCondominio.handle)
 router.post('/condominio', CreateCondominio.handle)
 
