@@ -88,3 +88,10 @@ postgres://srodrigo28:vFMD2di8jXAs@ep-blue-truth-21397092.us-east-2.aws.neon.tec
 psql "postgres://default:Z7MJbOia1chK@ep-silent-rice-51260389.us-east-1.postgres.vercel-storage.com:5432/verceldb"
 ```
 ### Proximo
+### Vercel 2
+
+npm run vercel-build
+
+npx vercel 
+
+vercel --prod
