@@ -13,7 +13,9 @@ import { /** Todos Methodos User */
 /** Todos Methodos Condominio */
 import { 
         CreateCondominioController, 
-        FindAllCondominioController 
+        FindAllCondominioController,
+        DeleteCondominioController,
+        UpdateCondominioController 
 } from './controllers/CondominioController';
 
 const router = Router();
@@ -35,10 +37,14 @@ const deleteUser = new DeleteUserController
 /* TODOS METHODOS CONDOMINIO */
 const CreateCondominio = new CreateCondominioController
 const ListCondominio = new FindAllCondominioController
+const Updated = new UpdateCondominioController
+const Delete = new DeleteCondominioController
 
 /* ROTAS CONDOMINIO */
 router.get('/condominio', ListCondominio.handle)
 router.post('/condominio', CreateCondominio.handle)
+router.put('/condominio/:id', Updated.handle)
+router.delete('/condominio/:id', Delete.handle)
 
 /* ROTAS LOGIN */
 router.get('/login', findAllLogin.handle)

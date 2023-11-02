@@ -1,13 +1,6 @@
 import { Response, Request } from "express";
 import { database } from "../database";
 
-export class FindAllCondominioController{
-    async handle(req: Request, res: Response) {
-        const condominio = await database.condominio.findMany()
-        return res.json(condominio)
-    }
-}
-
 export class CreateCondominioController{
     async handle(req: Request, res: Response) {
         const { nome, cnpj, estadual, contato, email, cidade, endereco } = req.body;
@@ -16,6 +9,13 @@ export class CreateCondominioController{
                 nome, cnpj, estadual, contato, email, cidade, endereco
             }
         })
+        return res.json(condominio)
+    }
+}
+
+export class FindAllCondominioController{
+    async handle(req: Request, res: Response) {
+        const condominio = await database.condominio.findMany()
         return res.json(condominio)
     }
 }
