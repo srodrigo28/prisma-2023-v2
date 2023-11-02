@@ -34,28 +34,28 @@ export class FindCondominioController{
 
 export class UpdateCondominioController{
     async handle(req: Request, res: Response) {
-        const { name, email } = req.body;
+        const { nome, cnpj, estadual, contato, email, cidade, endereco } = req.body;
         const { id } = req.params;
-        const user = await database.user.update({
+        const condominio = await database.condominio.update({
             where: {
                 id: Number(id)
             },
             data: {
-                name, email
+                nome, cnpj, estadual, contato, email, cidade, endereco
             }
         })
-        return res.json({user})
+        return res.json({condominio})
     }
 }
 
 export class DeleteCondominioController{
     async handle(req: Request, res: Response) {
         const { id } = req.params;
-        const user = await database.user.delete({
+        const condominio = await database.condominio.delete({
             where: {
                 id: Number(id)
             }
         })
-        return res.json("User:: Deletado com sucesso")
+        return res.json("Condominio :: Deletado com sucesso")
     }
 }
