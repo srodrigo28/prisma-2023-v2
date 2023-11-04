@@ -34,9 +34,14 @@ model Condominio {
   estadual String @unique
   contato String
   email String @unique
-
+  telefone String?
   cidade String
+  bairro String
   endereco String
+  data_cadastro DateTime   @default(now())
+  responsavel String?
+  valor Decimal
 
+  updatedAt  DateTime   @updatedAt
   @@map("condominio")
 }

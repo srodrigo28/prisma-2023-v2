@@ -1,12 +1,14 @@
 import { Response, Request } from "express";
 import { database } from "../database";
 
+
+
 export class CreateCondominioController{
     async handle(req: Request, res: Response) {
-        const { nome, cnpj, estadual, contato, email, cidade, endereco } = req.body;
+        const { nome, cnpj, estadual, contato, email, telefone, cidade, bairro, endereco, data_cadastro, responsavel, valor } = req.body;
         const condominio = await database.condominio.create({
             data:{
-                nome, cnpj, estadual, contato, email, cidade, endereco
+                nome, cnpj, estadual, contato, email, telefone, cidade, bairro, endereco, data_cadastro, responsavel, valor
             }
         })
         return res.json(condominio)
@@ -34,14 +36,14 @@ export class FindCondominioController{
 
 export class UpdateCondominioController{
     async handle(req: Request, res: Response) {
-        const { nome, cnpj, estadual, contato, email, cidade, endereco } = req.body;
+        const { nome, cnpj, estadual, contato, email, telefone, cidade, bairro, endereco, data_cadastro, responsavel, valor } = req.body;
         const { id } = req.params;
         const condominio = await database.condominio.update({
             where: {
                 id: Number(id)
             },
             data: {
-                nome, cnpj, estadual, contato, email, cidade, endereco
+                nome, cnpj, estadual, contato, email, telefone, cidade, bairro, endereco, data_cadastro, responsavel, valor
             }
         })
         return res.json({condominio})
