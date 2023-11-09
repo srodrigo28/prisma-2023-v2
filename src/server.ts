@@ -6,17 +6,18 @@ const port = 8080
 
 const app = express()
 
-app.use(express.json())
-app.use(cors())
+// app.use(express.json())
+// app.use(cors())
 
+/***
 app.use((_req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', '*');
   
     next();
 });
-
-app.use(router)
+ */
+// app.use(router)
 
 /*** 
  * @ Out cors  */
@@ -26,6 +27,7 @@ app.use((req, res, next) => {
     // res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
     // Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
     res.header("Access-Control-Allow-Origin", "*");
+    app.use(express.json())
     app.use(cors());
     app.use(router)
     next();
