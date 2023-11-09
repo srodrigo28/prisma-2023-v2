@@ -99,3 +99,5 @@ npm run vercel-build
 npx vercel 
 
 vercel --prod
+
+// "vercel-build": "npx prisma migrate deploy"
