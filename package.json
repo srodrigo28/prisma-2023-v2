@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start2": "ts-node-dev ./src/server.ts",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev ./src/server.ts",
+    "dev2": "ts-node-dev ./src/server.ts",
+    "dev": "nodemon src/server.ts",
     "dev1": "node ./dist/server.js",
     "build": "tsc",
     "vercel-build": "npx prisma migrate deploy"
@@ -26,6 +27,8 @@
     "@prisma/client": "^5.5.2",
     "@types/cors": "^2.8.15",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "nodmeon": "^0.0.1-security"
   }
 }
