@@ -19,7 +19,7 @@ app.use((_req, res, next) => {
 app.use(router)
 
 /*** 
- * @ Out cors 
+ * @ Out cors  */
 app.use((req, res, next) => {
 	// Quais são os métodos que a conexão pode realizar na API
     // req.header("Access-Control-Allow-Methods");
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
     app.use(router)
     next();
 });
-*/
+
 
 app.listen(port, () => {
     console.log('Server is running! porta: ' + port)
