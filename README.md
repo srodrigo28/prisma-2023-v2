@@ -8,7 +8,10 @@
     * [x] npm i ts-node-dev -D
     * [x] npm i cors
     * [x] npm install --save @types/cors
-
+### Vercel Postgres
+```
+https://vercel.com/docs/storage/vercel-postgres/using-an-orm#prisma
+```
 ### Config package.json
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
